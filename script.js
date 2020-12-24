@@ -1,6 +1,6 @@
 // Unsplash API
-const count = 30;
-const apiURL = `https://api.unsplash.com/photos/random?client_id=${API_KEY}&count=${count}`;
+let count = 5;
+let apiURL = `https://api.unsplash.com/photos/random?client_id=${API_KEY}&count=${count}`;
 
 let photosArray = [];
 let ready = false;
@@ -18,7 +18,8 @@ function imageLoaded() {
   if (imagesLoaded === totalImages) {
     ready = true;
     $loader.hidden = true;
-    console.log(`ready = ${ready}`);
+    count = 30;
+    apiURL = `https://api.unsplash.com/photos/random?client_id=${API_KEY}&count=${count}`;
   }
 }
 
