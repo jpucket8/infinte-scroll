@@ -1,5 +1,6 @@
 // Unsplash API
 let count = 5;
+let API_KEY = process.env.API_KEY;
 let apiURL = `https://api.unsplash.com/photos/random?client_id=${API_KEY}&count=${count}`;
 
 let photosArray = [];
